@@ -60,8 +60,50 @@
 
           <tr>
 
+              <td>Ramp Up Period 1</td>
+              <td><input name="rempUpPeriod1" type="text" /></td>
+
+
+          </tr>
+
+          <tr>
+
+              <td>Ramp Up Period 2</td>
+              <td><input name="rempUpPeriod2" type="text" /></td>
+
+
+          </tr>
+
+          <tr>
+
+              <td>Ramp Up Period 3</td>
+              <td><input name="rempUpPeriod3" type="text" /></td>
+
+
+          </tr>
+
+          <tr>
+
+              <td>Ramp Up Period 4</td>
+              <td><input name="rempUpPeriod4" type="text" /></td>
+
+
+          </tr>
+
+          <tr>
+
+              <td>Ramp Up Period 5</td>
+              <td><input name="rempUpPeriod5" type="text" /></td>
+
+
+          </tr>
+
+
+
+          <tr>
+
               <td>Do you need to get server details</td>
-              <td>  <input name="serverDetails" type="radio" value="Yes" /> Yes <input name="serverDetails" type="radio" value="No" /> No</td>
+              <td>  <input checked="Yes" name="serverDetails" type="radio" value="Yes" /> Yes <input name="serverDetails" type="radio" value="No" /> No</td>
 
 
           </tr>

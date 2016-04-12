@@ -31,23 +31,94 @@ public class PerformanceMeasurementMeterRun extends HttpServlet {
 
 
 
-        if(testType=="Web"){
+
+
+
+
+        if(testType.equals("Web")){
+
+            System.out.println("I am a web Test ");
 
             wTRM=new WebTestRunnerMod();
 
             wTRM.setApplicationPath(request.getParameter("applicationPath"));
             wTRM.setAcceptType(request.getParameter("acceptType"));
-            wTRM.setApplicationPort((short) Integer.parseInt((request.getParameter("applicationPort"))));
+
+
+            try {
+
+                wTRM.setApplicationPort((short) Integer.parseInt((request.getParameter("applicationPort"))));
+
+
+
+
+
+
+            }catch (Exception e1){
+
+                System.out.println("Invalid input for port");
+
+            }
+
+
+
+
+
             wTRM.setApplicationURL(request.getParameter("applicationURL"));
             wTRM.setCommandsSSH(request.getParameter("commandsSSH"));
             wTRM.setHostNameSSH(request.getParameter("hostNameSSH"));
             wTRM.setPasswordSSH(request.getParameter("passwordSSH"));
             wTRM.setRequestType(request.getParameter("requestType"));
             wTRM.setServerDetails(request.getParameter("serverDetails"));
-            wTRM.setApplicationPort((short) Integer.parseInt((request.getParameter("timePeriodSSH"))));
+
+
+            try {
+
+                wTRM.setTimePeriodSSH(Float.parseFloat((request.getParameter("timePeriodSSH"))));
+
+            }catch (Exception e1){
+
+                System.out.println("Invalid input for SSH time period");
+
+            }
+
+
             wTRM.setUserNameSSH(request.getParameter("userNameSSH"));
 
+
+            try {
+
+                wTRM.setRempUpPeriod1(Float.parseFloat((request.getParameter("rempUpPeriod1"))));
+                wTRM.setRempUpPeriod2(Float.parseFloat((request.getParameter("rempUpPeriod2"))));
+                wTRM.setRempUpPeriod3(Float.parseFloat((request.getParameter("rempUpPeriod3"))));
+                wTRM.setRempUpPeriod4(Float.parseFloat((request.getParameter("rempUpPeriod4"))));
+                wTRM.setRempUpPeriod5(Float.parseFloat((request.getParameter("rempUpPeriod5"))));
+
+            }catch (Exception e1){
+
+                System.out.println("Invalid input for Remp-Up Period");
+
+            }
+
+
+
+
             wTRS=new WebTestRunnerSer();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         }else if(testType=="Database"){
 

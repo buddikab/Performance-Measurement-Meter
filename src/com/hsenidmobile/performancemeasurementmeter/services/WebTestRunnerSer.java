@@ -1,9 +1,68 @@
 package com.hsenidmobile.performancemeasurementmeter.services;
 
+import com.hsenidmobile.performancemeasurementmeter.model.WebTestRunnerMod;
+
 /**
  * Created by buddika on 4/7/16.
  */
-public class WebTestRunnerSer {
+public class WebTestRunnerSer implements RunTestInterface,Runnable {
+
+
+    Thread t1;
+    Thread t2;
+    WebTestRunnerMod wTRM;
+
+
+
+    public WebTestRunnerSer() {
+
+
+        if(wTRM.getServerDetails().equals("Yes")){
+
+            t1 = new Thread(this);
+            t1.start();
+
+        }
+
+
+        for(int i=0;i==i;i++){
+
+
+
+        }
+
+
+
+    }
+
+
+    @Override
+    public void run() {
+
+
+        if(t1.isAlive()){
+
+            //call to SSH class
+
+        }else if(t2.isAlive()){
+
+
+
+        }
+
+
+
+    }
+
+
+
+    @Override
+    public void runTest() {
+
+
+
+
+    }
 
 
 //    String rawData = "id=10";
